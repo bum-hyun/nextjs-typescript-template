@@ -1,3 +1,95 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "next/core-web-vitals"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jasmine": true,
+    "jest": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "prettier",
+    "@emotion",
+    "simple-import-sort"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "react-hooks/exhaustive-deps": 0,
+    "react/display-name": 0,
+    "react/no-unescaped-entities": 0,
+    "react/prop-types": 0,
+    "no-undef": 0,
+    "no-console": 0,
+    "no-constant-condition": 1,
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "prettier/prettier": [
+      "warn",
+      {
+        "printWidth": 160,
+        //코드 한줄 최대치
+        "semi": true,
+        //코드 마지막에 세미콜론
+        "singleQuote": false,
+        //문자열을 작은따옴표로 작성할것인지(false = 큰 따옴표)
+        "trailingComma": "all",
+        //객체나 배열 등에 맨 마지막에도 콤마
+        "tabWidth": 2,
+        //들여쓰기 2칸(스페이스 2칸)
+        "bracketSpacing": true,
+        //객체 리터럴에서 괄호에 공백 삽입 여부
+        "jsxSingleQuote": false,
+        //jsx에 작은따옴표 사용 여부
+        "endOfLine": "auto",
+        "useTabs": false,
+        //탭 대신 스페이스
+        "arrowParens": "avoid"
+        // 화살표 함수에서 매개변수를 하나만 받을때 괄호 생략
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx"
+      ],
+      "plugins": [
+        "@typescript-eslint",
+        "prettier",
+        "simple-import-sort"
+      ]
+    }
+  ]
 }

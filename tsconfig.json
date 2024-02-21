@@ -17,8 +17,51 @@
         "name": "next"
       }
     ],
+    "typeRoots": [
+      "node_modules/@types",
+      "@types"
+    ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/assets/*": [
+        "public/assets/*"
+      ],
+      "@/constants/*": [
+        "./constants/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
+      ],
+      "@/layouts/*": [
+        "./layouts/*"
+      ],
+      "@/middlewares/*": [
+        "./middlewares/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/plugins/*": [
+        "./plugins/*"
+      ],
+      "@/services/*": [
+        "./services/*"
+      ],
+      "@/stores/*": [
+        "./stores/*"
+      ],
+      "@/styles/*": [
+        "./styles/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
